@@ -1,0 +1,28 @@
+<h1>{{title}}</h1>
+<div class="form-group">
+
+    <input class="form-control" id="productname" placeholder="ürün ara" [(ngModel)]="filtertext">
+    <div *ngIf="filtertext" class="form-text">Şuan {{filtertext}} aradınız </div>
+</div>
+
+<div class="row">
+    <div *ngFor="let product of products | productFilter:filtertext" class="card " style="width: 18rem;">
+        <img [src]="product.imageurl" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text">bilgi</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{product.description}}</li>
+            <li class="list-group-item">{{product.price | currency:'TR':true:"1.2-2"}}</li>
+
+        </ul>
+        <div class="card-body">
+            <!-- <a id="b" class="btn btn-warning card-link">İncele</a> -->
+            <style>
+
+            </style>
+            <a (click)="addToCart(product)" class="btn btn-success ">Sepete Ekle</a>
+        </div>
+    </div>
+</div>

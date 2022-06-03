@@ -1,0 +1,27 @@
+.nav-link:hover {
+    background-color: rgb(176, 177, 178);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+}
+
+.nav-link:active {
+    background-color: coral;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.container {
+    background-color: rgb(106, 144, 137);
+    color: black;
+}
+
+.container:hover {
+    background-color: rgb(102, 172, 174);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(2, 2, 2, 0.2)
+}

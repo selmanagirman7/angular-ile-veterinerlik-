@@ -1,0 +1,8 @@
+<h3><a class="cat" routerLink="/products">{{title}}</a></h3>
+<div class="list-group">
+    <a class="list-group-item active text-center align-text-bottom">Tüm Ürünler</a>
+</div>
+<div class="list-group " *ngFor="let category of categorys">
+    <a class="list-group-item text-center" onClick="category.id" routerLink="products/category/{{category.id}}">{{category.name}}</a>
+
+</div>
